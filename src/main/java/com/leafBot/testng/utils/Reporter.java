@@ -25,7 +25,7 @@ public abstract class Reporter{ // static
 	@BeforeSuite
 	public void startReport() {
 		reporter = new ExtentHtmlReporter("./reports/result.html");
-		reporter.setAppendExisting(true); 
+		reporter.setAppendExisting(false); 
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 	}
@@ -48,7 +48,7 @@ public abstract class Reporter{ // static
 			snapNumber = takeSnap();
 			try {
 				img = MediaEntityBuilder.createScreenCaptureFromPath
-						("./../reports/images/"+snapNumber+".png").build();
+						("./../reports/"+snapNumber+".png").build();
 			} catch (IOException e) {
 
 			}
@@ -78,6 +78,8 @@ public abstract class Reporter{ // static
 	}
 }
 
+
+// done
 
 
 

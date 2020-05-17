@@ -393,7 +393,7 @@ public class SeleniumBase extends Reporter implements Browser, Element{
 	public long takeSnap(){
 		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L; 
 		try {
-			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/images/"+number+".png"));
+			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/"+number+".png"));
 		} catch (WebDriverException e) {
 			System.out.println("The browser has been closed.");
 		} catch (IOException e) {
