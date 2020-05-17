@@ -13,7 +13,7 @@ import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-public abstract class Reporter{
+public abstract class Reporter{ // static
 
 	public ExtentHtmlReporter reporter;
 	public static ExtentReports extent;
