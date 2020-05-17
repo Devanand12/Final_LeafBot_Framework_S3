@@ -25,7 +25,7 @@ public abstract class Reporter{
 	@BeforeSuite
 	public void startReport() {
 		reporter = new ExtentHtmlReporter("./reports/result.html");
-		reporter.setAppendExisting(true); 
+		reporter.setAppendExisting(false); 
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
 	}
